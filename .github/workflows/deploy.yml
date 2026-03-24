@@ -3,7 +3,7 @@ name: Deploy Event-Driven Notification System
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   lint-and-test:
