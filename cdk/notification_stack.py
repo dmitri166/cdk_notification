@@ -75,7 +75,7 @@ class NotificationStack(cdk.Stack):
             log_retention=logs.RetentionDays.TWO_WEEKS,
         )
 
-        # Grant consumer SQS receive/delete + SES send
+        # Grant consumer SQS receive/delete +  SES send
         queue.grant_consume_messages(consumer)
         consumer.add_to_role_policy(iam.PolicyStatement(
             actions=["ses:SendEmail"],
